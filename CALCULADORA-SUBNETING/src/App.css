@@ -1,0 +1,360 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+.naranja {
+    color: #ff5733;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    color: #fff;
+    text-align: center;
+    background: linear-gradient(115deg, #2C1F32, #1F1A34);
+}
+
+.container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.social-bar {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px 450px 20px 450px;
+    padding-top: 40px;
+    padding-left: 450px;
+    padding-right: 450px;
+    background-color: transparent;
+}
+
+.logo {
+    font-size: 28px;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    z-index: 2;
+}
+
+.social-icons {
+    display: flex;
+    gap: 20px;
+    z-index: 2;
+}
+
+.social-icons a {
+    padding: 0px 55px 25px 0px;
+    color: white;
+    font-size: 30px;
+    transition: color 0.3s, transform 0.3s;
+}
+
+.social-icons a:hover {
+    color: #888;
+    transform: scale(1.1);
+}
+
+.mainContainer {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    padding: 40px;
+    max-width: 500px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+    z-index: 10;
+    /* Asegúrate de que este z-index sea suficientemente alto */
+}
+
+.inputField,
+.calculateButton,
+.toggleButton {
+    z-index: 2;
+    border: none;
+    border-radius: 20px;
+    padding: 12px 25px;
+    margin: 15px 0;
+    width: 100%;
+    font-size: 16px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.inputField {
+    z-index: 2;
+    background-color: #2a2a3a;
+    color: #fff;
+}
+
+.toggle-switch {
+    position: relative;
+    display: inline-block;
+    width: 60px; /* Ancho del switch */
+    height: 34px; /* Altura del switch */
+    margin: 0; /* Elimina los márgenes adicionales si no son necesarios */
+    vertical-align: middle; /* Asegura que los elementos estén alineados verticalmente */
+  }
+  
+  .toggle-switch input {
+    opacity: 0;
+    position: absolute;
+    z-index: -1; /* Ocultar el input real */
+  }
+  
+  .switch {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    background-color: #ccc; /* Color de fondo cuando está desactivado */
+    transition: .4s;
+    border-radius: 34px; /* Redondeo del switch */
+    width: 60px; /* Ancho del switch */
+    height: 34px; /* Altura del switch */
+  }
+  
+  .switch:before {
+    content: '';
+    position: absolute;
+    height: 26px; /* Altura del círculo */
+    width: 26px; /* Ancho del círculo */
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    transition: .4s;
+    border-radius: 50%; /* Redondeo del círculo */
+  }
+  
+  input:checked + .switch {
+    background-color: #4CAF50; /* Color de fondo cuando está activado */
+  }
+  
+  input:checked + .switch:before {
+    transform: translateX(26px); /* Desplazamiento del círculo al activar */
+  }
+  
+  input:focus + .switch {
+    box-shadow: 0 0 1px #2196F3;
+  }
+  
+  .toggle-switch-label {
+    position: relative;
+    display: inline-block;
+    margin-left: 10px; /* Ajusta este valor para que el texto no se solape con el switch */
+    vertical-align: middle; /* Asegura que los elementos estén alineados verticalmente */
+    color: white; /* Color del texto */
+  }
+  
+.calculateButton,
+.toggleButton {
+    z-index: 2;
+    background-color: #ff9800;
+    color: #fff;
+    cursor: pointer;
+}
+
+.calculateButton:hover,
+.toggleButton:hover {
+    background-color: #ff671f;
+    transform: translateY(-3px);
+}
+
+.error {
+    z-index: 2;
+    color: #ff5722;
+    margin-top: 10px;
+}
+
+.resultsContainer,
+.infoContainer {
+    z-index: 2;
+    background-color: rgba(42, 42, 58, 0.8);
+    padding: 25px;
+    border-radius: 15px;
+    margin-top: 25px;
+}
+
+.infoContainer h2 {
+    font-size: 22px;
+    margin-bottom: 20px;
+}
+
+.side-nav-bar {
+    width: 70px;
+    height: auto;
+    background-color: #33333375;
+    display: flex;
+    flex-direction: column;
+    border-radius: 35px;
+    position: fixed;
+    right: 5%;
+    top: 50%;
+    transform: translateY(-50%);
+    backdrop-filter: blur(10px);
+    padding-top: 30px;
+    padding-bottom: 30px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+    overflow-y: auto;
+    scrollbar-width: none;
+    z-index: 2;
+}
+
+.side-nav-bar::-webkit-scrollbar {
+    display: none;
+}
+
+.nav-icon {
+    background: none;
+    border: none;
+    color: #ffffff;
+    font-size: 25px;
+    cursor: pointer;
+    transition: 0.3s;
+    margin-bottom: 25px;
+}
+
+.nav-icon:last-child {
+    margin-bottom: 0;
+}
+
+.nav-icon:hover {
+    transform: scale(1.1);
+    color: #ff5733;
+}
+
+.nav-icon:focus {
+    outline: none;
+}
+
+.footer {
+    position: fixed;
+    bottom: 0.5;
+    left: 0.5;
+    width: 99%;
+    z-index: 5;
+}
+
+#particles {
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 99vh;
+    z-index: 1;
+}
+
+@media (max-width: 1635px) {
+    .side-nav-bar {
+        right: 1%;
+    }
+}
+
+@media (max-width: 1200px) {
+    .social-bar {
+        padding: 40px 10% 20px 10%;
+    }
+}
+
+@media (max-width: 992px) {
+    .social-icons a {
+        padding: 0 20px 25px 0;
+    }
+}
+
+@media (max-width: 1078px) {
+    .social-bar {
+        padding: 40px 5% 20px 5%;
+    }
+
+    .side-nav-bar {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        top: auto;
+        height: auto;
+        width: 100%;
+        transform: none;
+        flex-direction: row;
+        justify-content: space-around;
+        padding: 10px 0;
+        border-radius: 0;
+        backdrop-filter: none;
+    }
+
+    .nav-icon {
+        margin-bottom: 0;
+    }
+}
+
+@media (max-width: 770px) {
+    .social-bar {
+        width: 90%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .social-icons {
+        display: flex;
+        align-items: center;
+        padding-top: 15px;
+    }
+
+    .social-icons a {
+        padding: 0px 15px 0px 15px;
+    }
+}
+
+@media (max-width: 578px) {
+
+    .mainContainer {
+        width: 95%;
+        margin: 0 auto;
+        padding: 20px;
+    }
+
+    .inputField,
+    .calculateButton,
+    .toggleButton {
+        padding: 12px 15px;
+    }
+
+    .side-nav-bar {
+        max-width: 100%;
+    }
+
+    .nav-icon {
+        font-size: 20px;
+        margin-bottom: 15px;
+    }
+}
+
+@media (max-width: 320px) {
+    .logo {
+        font-size: 24px;
+    }
+
+    .social-icons a {
+        font-size: 25px;
+    }
+}
+
+.side-nav-bar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.side-nav-bar::-webkit-scrollbar {
+    display: none;
+}

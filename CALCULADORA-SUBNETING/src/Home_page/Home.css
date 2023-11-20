@@ -1,0 +1,243 @@
+.container-home{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    padding-top: 80px;
+    padding-bottom: 250px;
+}
+
+.naranja{
+    color: #ff5733;
+}
+
+.Big-Font{
+    padding: 15px;
+    font-size: 3rem;
+    z-index: 2;
+}
+
+.Medium-Font{
+    padding: 15px;
+    font-size: 2rem;
+    z-index: 2;
+}
+
+.Littel-Font{
+    padding: 15px;
+    font-size: 1.2rem;
+    z-index: 2;
+}
+
+.buttons-home{
+    display: flex;
+    padding: 15px;
+}
+
+.IpCalculator-btn{
+    font-size: 0.8rem;
+    font-weight: 600;
+    width: 150px;
+    border: 1px solid white;
+    border-radius: 8px;
+    padding: 10px 20px;
+    background: transparent;
+    color: white;
+    transition: 0.3s;
+    margin: 0px 50px 0px 0px;
+    z-index: 2;
+    transition: all ease .2s;
+}
+
+.IpCalculator-btn:hover{
+    cursor: pointer;
+    box-shadow: rgba(255, 255, 255, 0.845) 0px 10px 10px,
+    rgba(255, 255, 255, 0.727) 0px 15px 15px,
+    rgba(255, 255, 255, 0.62) 0px 20px 25px;
+    z-index: 2;
+}
+
+.About-btn{
+    font-size: 0.8rem;
+    font-weight: 600;
+    width: 150px;
+    border: 1px solid #ff5733;
+    border-radius: 8px;
+    padding: 10px 20px;
+    background: transparent;
+    color: #ff5733;
+    transition: 0.3s;
+    margin: 0px 50px 0px 0px;
+    z-index: 2;
+    transition: all ease .2s;
+}
+
+.About-btn:hover{
+    cursor: pointer;
+    box-shadow: rgba(255, 88, 51, 0.845) 0px 10px 10px,
+    rgba(255, 88, 51, 0.727) 0px 15px 15px,
+    rgba(255, 88, 51, 0.62) 0px 20px 25px;
+    z-index: 2;
+}
+
+.left-home {
+    z-index: 2;
+    margin-right: 50px;
+    border-radius: 20px;
+    width: 700px;
+    height: 450px;
+    color: #33ff49;
+    background-color: #000;
+    font-family: 'Courier New', monospace;
+    font-size: 1.2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.code-effect {
+    display: block; 
+    white-space: pre;
+    overflow: hidden;
+    border-right: 3px solid transparent; /* Cursor invisible cuando no parpadea */
+}
+
+.blinking-cursor {
+    animation: blink 1s step-end infinite;
+}
+
+@keyframes blink {
+    50% {
+        opacity: 0;
+    }
+}
+
+@media (max-width: 1463px) {
+    .container-home{
+        justify-content: center;
+        align-items: center;
+        display: flex;
+        padding-top: 80px;
+        padding-bottom: 250px;
+    }
+
+    .Big-Font{
+        padding: 15px;
+        font-size: 2rem;
+        z-index: 2;
+    }
+    
+    .Medium-Font{
+        padding: 15px;
+        font-size: 1.5rem;
+        z-index: 2;
+    }
+    
+    .Littel-Font{
+        padding: 15px;
+        font-size: 0.8rem;
+        z-index: 2;
+    }
+
+    .left-home {
+        z-index: 2;
+        margin-right: 20px;
+        border-radius: 20px;
+        width: 500px;
+        height: 300px;
+        color: #33ff49;
+        background-color: #000;
+        font-family: 'Courier New', monospace;
+        font-size: .8rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+
+@media (max-width: 960px){
+    .container-home{
+        justify-content: center;
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+
+    .Big-Font{
+        padding: 15px;
+        font-size: 2.5rem;
+        z-index: 2;
+    }
+    
+    .Medium-Font{
+        padding: 15px;
+        font-size: 2rem;
+        z-index: 2;
+    }
+    
+    .Littel-Font{
+        padding: 15px;
+        font-size: 1.2rem;
+        z-index: 2;
+    }
+
+    .left-home {
+        z-index: 2;
+        margin-right: 50px;
+        border-radius: 20px;
+        width: 600px;
+        height: 350px;
+        color: #33ff49;
+        background-color: #000;
+        font-family: 'Courier New', monospace;
+        font-size: 1rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+@media (max-width: 660px){
+    .container-home{
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        width: 100%;
+        margin-top: 70px;
+        margin-bottom: 70px;
+    }
+
+    .buttons-home{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+    
+    .left-home {
+        display: none;
+    }
+
+    .right-home{
+        width: 90%;
+    }
+
+    .Big-Font{
+        padding: 15px;
+        font-size: 2rem;
+        z-index: 2;
+    }
+    
+    .Medium-Font{
+        padding: 15px;
+        font-size: 1.5rem;
+        z-index: 2;
+    }
+    
+    .Littel-Font{
+        padding: 15px;
+        font-size: 1rem;
+        z-index: 2;
+    }
+}
